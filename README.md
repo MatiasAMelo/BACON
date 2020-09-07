@@ -1,2 +1,2 @@
-#BACON
-BAsic Calculator On Node.js
+BACON
+This project is a BAsic Calculator On Node. Just that =)
