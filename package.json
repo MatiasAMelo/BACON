@@ -1,0 +1,19 @@
+{
+  "name": "bacon",
+  "version": "0.0.1",
+  "description": "BAsic Calculator On Node.js",
+  "main": "bacon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejandroJMelo/BACON.git"
+  },
+  "author": "Alejandro Julian Melo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlejandroJMelo/BACON/issues"
+  },
+  "homepage": "https://github.com/AlejandroJMelo/BACON#readme"
+}
