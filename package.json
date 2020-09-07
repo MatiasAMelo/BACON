@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AlejandroJMelo/BACON/issues"
   },
-  "homepage": "https://github.com/AlejandroJMelo/BACON#readme"
+  "homepage": "https://github.com/AlejandroJMelo/BACON#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }

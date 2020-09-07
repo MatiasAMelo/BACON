@@ -1,1 +1,2 @@
-console.log('Hello world');
+const colors = require('colors');
+console.log('Hello world'.green)
