@@ -1,6 +1,6 @@
 const argv = require('./config/yargs').argv;
 const colors = require('colors');
-const { sum, minus, product, divide } = require('./operations/basic');
+const { sum, minus, product, divide, power } = require('./operations/basic');
 const hypo = require('./operations/hypotenuse')
 
 
@@ -27,7 +27,16 @@ switch (command) {
         let hypo_ab = hypo.hypotenuse(argv.a, argv.b);
         console.log(`Hypotenuse of ${argv.a} and ${argv.b} is equal to ${hypo_ab}`.green);
         break
+    case 'power':
+        let power_ab = power(argv.a, argv.b);
+        console.log(`power ${argv.a} ^ ${argv.b} is equal to ${power_ab}`.green);
+        break    
+    //  case 'root2':
+    //      let root2_ab = root(argv.a, argv.b);
+    //      console.log(`square ${argv.a}   is equal to ${root2_ab}`.green);
+    //     break        
     default:
         console.log("Unknow command");
         break;
+
 }
