@@ -1,10 +1,12 @@
 const argv = require('./config/yargs').argv;
 const colors = require('colors');
 const { sum, minus, product, divide, power } = require('./operations/basic');
+const {area_square} = require('./operations/area-perimeter')
 const hypo = require('./operations/hypotenuse')
 
 
 let command = argv._[0];
+
 
 switch (command) {
     case 'sum':
@@ -31,12 +33,23 @@ switch (command) {
         let power_ab = power(argv.a, argv.b);
         console.log(`power ${argv.a} ^ ${argv.b} is equal to ${power_ab}`.green);
         break    
-    //  case 'root2':
+    case 'area':
+        if (argv.fig === 'square'){
+            let resultarea_square = area_square(argv.s);
+            console.log(`Area of square of side ${argv.s} is equal to ${resultarea_square}`.green);
+        }
+        break  
+          
+    
+        //  case 'root2':
     //      let root2_ab = root(argv.a, argv.b);
     //      console.log(`square ${argv.a}   is equal to ${root2_ab}`.green);
-    //     break        
+    //     break    
+        
     default:
         console.log("Unknow command");
         break;
 
+
+        
 }
