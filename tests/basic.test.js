@@ -1,4 +1,4 @@
-const { sum, minus, product, divide,power } = require('../operations/basic');
+const { sum, minus, product, divide,power, sqrt,cbrt } = require('../operations/basic');
 const { TestScheduler } = require('jest');
 
 test('Add 1 + 2 to equal 3', () => {
@@ -18,4 +18,11 @@ test('Divide: a / b, where a=10 and b=2 to equal 5', () => {
 })
 test('power: a ^ b, where a=10 and b=2 to equal 100', () => {
     expect(power(10, 2)).toBe(100);
+})
+test('sqrt: a, where a=9  to equal 3', () => {
+    expect(sqrt(9)).toBe(3);
+})
+
+test('cbrt: a, where a=8  to equal 2', () => {
+    expect(cbrt(8)).toBe(2);
 })

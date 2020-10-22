@@ -1,8 +1,8 @@
 const argv = require('./config/yargs').argv;
 const colors = require('colors');
-const { sum, minus, product, divide, power } = require('./operations/basic');
-const {area_square} = require('./operations/area-perimeter')
-const hypo = require('./operations/hypotenuse')
+const { sum, minus, product, divide, power,sqrt,cbrt } = require('./operations/basic');
+const {area_sqr,area_rec,area_trian,area_cir} = require('./operations/area')
+const hypo = require('./operations/hypotenuse'  )
 
 
 let command = argv._[0];
@@ -34,17 +34,32 @@ switch (command) {
         console.log(`power ${argv.a} ^ ${argv.b} is equal to ${power_ab}`.green);
         break    
     case 'area':
-        if (argv.fig === 'square'){
-            let resultarea_square = area_square(argv.s);
-            console.log(`Area of square of side ${argv.s} is equal to ${resultarea_square}`.green);
+        if (argv.fig === 'rec'){
+            let rectangule_bh = area_rec(argv.h, argv.b);
+            console.log(`Area of rectangule of base ${argv.b} and height ${argv.h} is equal to ${rectangule_bh}`.green);
         }
-        break  
-          
-    
-        //  case 'root2':
-    //      let root2_ab = root(argv.a, argv.b);
-    //      console.log(`square ${argv.a}   is equal to ${root2_ab}`.green);
-    //     break    
+        if (argv.fig === 'sqr'){
+            let square_ss = area_sqr(argv.s);
+            console.log(`Area of square of side ${argv.s} is equal to ${square_ss}`.green);
+        }
+        if (argv.fig === 'trian'){
+            let triangule_bh = area_trian(argv.h, argv.b);
+            console.log(`Area of triangule of base ${argv.b} and height ${argv.h} is equal to ${triangule_bh}`.green);
+        }
+        if (argv.fig === 'cir'){
+            let circle_PIr = area_cir(argv.r);
+            console.log(`Area of circle of radio ${argv.r} is equal to ${circle_PIr}`.green);
+        
+        }
+        break
+    case 'sqrt':
+        let sqrt_ab = sqrt(argv.a);
+        console.log(`The square root ${argv.a} is equal to ${sqrt_ab}`.green);
+        break                     
+    case 'cbrt':
+        let cbrt_ab = cbrt(argv.a);
+        console.log(`The cube root ${argv.a} is equal to ${cbrt_ab}`.green);
+        break
         
     default:
         console.log("Unknow command");
